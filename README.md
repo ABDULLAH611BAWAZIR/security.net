@@ -2,6 +2,25 @@
 # security.net
 
 # Secure ASP.NET Core Web API
+## 📦 Dependencies / NuGet Packages
+
+This project uses the following NuGet packages:
+
+- Microsoft.AspNetCore.Authentication.JwtBearer
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.InMemory
+- System.IdentityModel.Tokens.Jwt
+
+The required packages are defined in the `.csproj` file.
+
+You do not need to upload the NuGet packages themselves to GitHub.
+
+After cloning the repository, run:
+
+```bash
+dotnet restore
+
+
 
 A security-focused ASP.NET Core Web API demonstrating common web application security practices.
 
