@@ -1,17 +1,18 @@
 using Microsoft.EntityFrameworkCore;
-using SecureProductApi.Models;
+using SecureApi.Models;
 
-namespace SecureProductApi.Data;
-
-public class ApplicationDbContext : DbContext
+namespace SecureApi.Data
 {
-    public ApplicationDbContext(
-        DbContextOptions<ApplicationDbContext> options)
-        : base(options)
+    public class ApplicationDbContext : DbContext
     {
+        public ApplicationDbContext(
+            DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
+        }
+
+        public DbSet<Product> Products { get; set; }
+
+        public DbSet<Post> Posts { get; set; }
     }
-
-    public DbSet<User> Users => Set<User>();
-
-    public DbSet<Product> Products => Set<Product>();
 }
